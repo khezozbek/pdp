@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher</title>
+</head>
+<body>
+    <h1>Teacher: </h1>
+    <form>
+        <input value="{{search}}" name="search" placeholder="search teacher...">
+        <button type="submit">Search</button>
+    </form>
+    <ul>
+        {% if teach %}
+        {%for tea in teach %}
+        <li>
+            <a href="{% url 'teach-detail' tea.pk %}">
+            <h3>{{tea.name}} {{tea.fris_name}} {{tea.science}}</h3>
+            </a>
+        </li>
+
+        {% endfor %}
+        {% else %}
+            <h1>No teacher</h1>
+        {% endif %}
+    </ul>
+</body>
+</html>

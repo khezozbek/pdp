@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Subjects</title>
+</head>
+<body>
+    <h1>Subject</h1>
+    <div>
+        {% if sub %}
+            {% for su in sub %}
+                <ul>
+                    <a href="{% url 'sub-detail' su.pk %}">
+                        <li>
+                            <h1>{{ su.name }}</h1>
+                        </li>
+                    </a>
+                </ul>
+        {% endfor %}
+        {% else %}
+            <h1>No Subject</h1>
+        {% endif %}
+    </div>
+</body>
+</html>

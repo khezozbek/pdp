@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ sub.name }}</title>
+</head>
+<body>
+    <div>
+        <h1>{{ subject.name }}</h1>
+
+        {% for teacher in subject.teachers.all %}
+        <h2>{{ teacher.frist_name}}</h2>
+        <h2>{{ teacher.last_name }}</h2>
+        {% endfor %}
+
+        {% for speciality in subject.specialities.all %}
+        <h2> {{ speciality.name }}</h2>
+        <h2> {{ speciality.code }}</h2>
+        <h2> {{ speciality.start_data }}</h2>
+
+
+        {% endfor%}
+    </div>
+</body>
+</html>

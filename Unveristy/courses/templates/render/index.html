@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unvsersity</title>
+</head>
+<body>
+  <h1>Speciality: </h1>
+    <div>
+        <form>
+            <input name="search" value="" placeholder="serach">
+            <button type="submit">Search</button>
+        </form>
+        <ul>
+            {% for sp in spec%}
+                <a href="{% url 'spec-detail' sp.pk%}">
+                    <li>
+                        <h3>{{ sp.name }}</h3>
+                    </li>
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

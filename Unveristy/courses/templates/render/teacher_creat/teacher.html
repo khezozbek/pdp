@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher</title>
+</head>
+<body>
+<ul>
+    <h1>Teacher</h1>
+
+    {% for teach in teacher %}
+    <a href="{% url 'teach-detail' teach.pk %}">
+        <li>
+            <p>{{teach.frist_name}}</p>
+        </li>
+    </a>
+    {% endfor %}
+
+</ul>
+</body>
+</html>
